@@ -102,30 +102,36 @@ selection_frame = Frame(window,bg="#bec8bb",borderwidth=10,relief=RAISED)
 selection_frame.place(relx=.20,rely=.4,relwidth=.40,relheight=.48)
 
 
+
+
+
+
+food_frame = Frame(selection_frame)
+food_frame.place(relx=0,rely=0,relwidth=1,relheight=1)
+
+
+food_text = Label(food_frame,text="food")
+food_text.pack()
+
+
+
+drink_frame = Frame(selection_frame)
+drink_frame.place(relx=0,rely=0,relwidth=1,relheight=1)
+
+
+drink_text = Label(drink_frame,text="drink")
+drink_text.pack()
+
+
 welcome_frame = Frame(selection_frame)
 welcome_frame.place(relx=0,rely=0,relwidth=1,relheight=1)
 
 
-welcome_text = Label(welcome_frame,text="Welcome")
-welcome_text.pack()
-
-# food_frame = Frame(selection_frame)
-# food_frame.place(relx=0,rely=0,relwidth=1,relheight=1)
-
-
-# food_text = Label(food_frame,text="food")
-# food_text.pack()
-
-
-
-# drink_frame = Frame(selection_frame)
-# drink_frame.place(relx=0,rely=0,relwidth=1,relheight=1)
-
-
-# drink_text = Label(drink_frame,text="drink")
-# drink_text.pack()
-
-
+chimage = Image.open('chicken.png')
+chimage = chimage.resize((450, 350), Image.ANTIALIAS)
+chiphoto_image = ImageTk.PhotoImage(chimage)
+chilabel = Label(welcome_frame, image = chiphoto_image)
+chilabel.pack()
 
 
 
